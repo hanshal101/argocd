@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: website
   namespace: test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: website
   template:
     metadata:
       labels:
-        app: nginx
+        app: website
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: website
+        image: hanshal785/test-static-web:latest
